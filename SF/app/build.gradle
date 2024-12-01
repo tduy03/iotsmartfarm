@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+android {
+    namespace 'com.example.smartfarm'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.smartfarm"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // Khối packaging để loại bỏ các file không cần thiết
+    packaging {
+        resources {
+            excludes += [
+                    'META-INF/spring.schemas',
+                    'META-INF/spring.tooling',
+                    'META-INF/license.txt',
+                    'META-INF/notice.txt', // Thêm dòng này để loại bỏ notice.txt
+                    'META-INF/spring.handlers' // Thêm dòng này nếu cần
+            ]
+        }
+    }
+}
+
+dependencies {
+    implementation libs.spring.web
+    implementation libs.spring.webmvc
+    implementation libs.retrofit
+    implementation libs.retrofit.gson
+    implementation libs.logging.interceptor.v493
+    implementation libs.appcompat.v130
+    implementation libs.constraintlayout.v204
+    implementation libs.material
+    implementation libs.activity
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#4CAF50</color> <!-- Màu xanh -->
+    <color name="blue">#2196F3</color> <!-- Màu xanh dương-->
+    <color name="red">#FF0000</color>   <!-- Màu đỏ -->
+    <color name="defaultColor">#FFFFFF</color> <!-- Màu mặc định -->
+    <!-- Primary color for your app -->
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+</resources>
